@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root{
+  --primary-dark-color: #141921; 
+  --primary-light-color: #ffffff; 
+  --primary-orange-color: #FEBD69;
+  --primary-border-radius: 4px;
+}
