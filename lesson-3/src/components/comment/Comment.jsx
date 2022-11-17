@@ -27,6 +27,7 @@ const Comment = () => {
       setNumber(images.length - 1)
     }
   }
+
   
 
 

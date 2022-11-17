@@ -12,3 +12,7 @@
   --primary-orange-color: #FEBD69;
   --primary-border-radius: 4px;
 }
+
+body{
+  background-color: #EAEDED;
+}
