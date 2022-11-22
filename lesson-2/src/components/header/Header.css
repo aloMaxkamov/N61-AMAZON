@@ -48,8 +48,6 @@
 }
 
 .header__search-wrapper > select{
-  min-width: 100px;
-  padding-left: 20px;
   border-right: 1px solid #ababab;
 }
 
