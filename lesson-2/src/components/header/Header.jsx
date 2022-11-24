@@ -3,9 +3,17 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
 import "./Header.css";
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Header({setIsNavbarSearchActive}) {
-  const [selectedOption, setSelectedOption] = useState("all")
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState("all");
+  const { i18n } = useTranslation();
+  
+  const changeWebsiteLang = (e) => {
+    i18n.changeLanguage(e.target.value || "uz");
+  }
+
   return (
     <header className="main-header">
       <div className="header__logo-wrapper">
@@ -16,8 +24,8 @@ function Header({setIsNavbarSearchActive}) {
       <div className="header__delivery-address">
         <HiOutlineLocationMarker className="address-icon" />
         <div className="delivery__location">
-          <p>Delivery to</p>
-          <b>Uzbekistan</b>
+          <p>{t("delivery_label")}</p>
+          <b>{t("country")}</b>
         </div>
       </div>
       <div className="header__search-wrapper">
@@ -32,6 +40,11 @@ function Header({setIsNavbarSearchActive}) {
           <FiSearch />
         </button>
       </div>
+      <select onChange={changeWebsiteLang}>
+        <option value="uz">UZ</option>
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+      </select>
     </header>
   );
 }

@@ -16,22 +16,6 @@ const Banner = () => {
     "https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg",
   ];
 
-  const prevImage = () => {
-    if (imageCount === 0) {
-      setImageCount(images.length - 1);
-    } else {
-      setImageCount(imageCount - 1);
-    }
-  };
-
-  const nextImage = () => {
-    if (imageCount < images.length - 1) {
-      setImageCount(imageCount + 1);
-    } else {
-      setImageCount(0);
-    }
-  };
-
   useEffect(() => {
     imageCon.current.scrollLeft = imageCount * imageCon.current.offsetWidth;
   }, [imageCount]);

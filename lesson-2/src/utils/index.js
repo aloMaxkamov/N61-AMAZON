@@ -21,7 +21,7 @@ const Backtotop = () => {
 
 const Overlay = ({callback, type}) => {
   return(
-    <div onClick={() => {callback(false)}} className={c.overlay} style={type == "navbar" ? {top: "110px"} : null}></div>  
+    <div onClick={() => {callback(false)}} className={c.overlay} style={type === "navbar" ? {top: "110px"} : null}></div>  
   )
 }
 

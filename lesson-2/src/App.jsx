@@ -16,7 +16,7 @@ function App() {
     else{
       document.body.style.overflow = "auto"
     }
-  }, [isSidebarActive])
+  }, [isSidebarActive, isNavbarSearchActive])
   return (
     <div>
       <Header setIsNavbarSearchActive={setIsNavbarSearchActive}/>

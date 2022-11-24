@@ -1,3 +1,7 @@
+.pdp__container{
+  display: flex;
+}
+
 .productImage__wrapper > div{
   width: 100px;
   height: 100px;
